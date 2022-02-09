@@ -976,6 +976,7 @@ ul {
     top: 0;
     height: 100%;
     background: var(--mainColor);
+    transition: width 0.6s linear;
 }
 
 @media(max-width:991px) {
@@ -1520,8 +1521,13 @@ ul {
 .discount {
     min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 50px;
+    flex-wrap: wrap;   
+}
+
+@media(max-width:991px) {
+    .discount {
+        padding-bottom: 50px;
+    }
 }
 
 .discount .image {
@@ -1844,7 +1850,7 @@ ul {
 }
 
 @keyframes change-background {
-    0% 100% {
+    0%,100% {
         background-image:url("../imgs/discount-background1.jpg");
     }
     50% {
